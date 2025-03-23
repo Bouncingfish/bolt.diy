@@ -1,0 +1,19 @@
+/* Electron-specific styles */
+
+/*
+ * Draggable region for title bar
+ * This allows the window to be dragged when title bar is transparent
+ */
+.electron-drag-region {
+  -webkit-app-region: drag;
+  app-region: drag; /* Future proofing for standard CSS property */
+}
+
+/*
+ * Non-draggable regions within the draggable area
+ * This allows buttons and other interactive elements to work properly
+ */
+.electron-no-drag {
+  -webkit-app-region: no-drag;
+  app-region: no-drag; /* Future proofing for standard CSS property */
+}
