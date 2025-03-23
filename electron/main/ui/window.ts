@@ -15,6 +15,12 @@ export function createWindow(rendererURL: string) {
       height: 800,
       ...bounds,
     },
+
+    // Make title bar transparent
+    titleBarStyle: 'hiddenInset', // For macOS
+    frame: process.platform !== 'darwin', // Use native frame on non-macOS platforms
+    transparent: true, // Allow window transparency
+    backgroundColor: '#00000000', // Transparent background
     vibrancy: 'under-window',
     visualEffectState: 'active',
     webPreferences: {

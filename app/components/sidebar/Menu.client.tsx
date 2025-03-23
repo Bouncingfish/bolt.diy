@@ -324,12 +324,16 @@ export const Menu = () => {
 
   return (
     <>
+      {/* Backdrop with blur effect when menu is open */}
+      {open && (
+        <div className="fixed inset-0 bg-gray-900/20 dark:bg-gray-900/40 backdrop-blur-sm transition-opacity duration-200 z-sidebar-backdrop" />
+      )}
       <motion.div
         ref={menuRef}
         initial="closed"
         animate={open ? 'open' : 'closed'}
         variants={menuVariants}
-        style={{ width: '340px' }}
+        style={{ width: '340px', marginTop: '100px', marginBottom: '100px' }}
         className={classNames(
           'flex selection-accent flex-col side-menu fixed top-0 h-full rounded-r-2xl',
           'bg-white dark:bg-gray-950 border-r border-bolt-elements-borderColor',
