@@ -8,6 +8,10 @@ $zIndexMax: 999;
   z-index: $zIndexMax - 2;
 }
 
+.z-sidebar-backdrop {
+  z-index: $zIndexMax - 3;
+}
+
 .z-port-dropdown {
   z-index: $zIndexMax - 3;
 }
