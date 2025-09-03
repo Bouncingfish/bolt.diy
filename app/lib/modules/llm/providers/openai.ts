@@ -48,6 +48,43 @@ export default class OpenAIProvider extends BaseProvider {
 
     // o1-mini: 128k context, 65k output limit (reasoning model)
     { name: 'o1-mini', label: 'o1-mini', provider: 'OpenAI', maxTokenAllowed: 128000, maxCompletionTokens: 65000 },
+
+    // Latest models (ready when available)
+    {
+      name: 'o1',
+      label: 'o1 (Latest)',
+      provider: 'OpenAI',
+      maxTokenAllowed: 200000,
+      maxCompletionTokens: 100000,
+    },
+    {
+      name: 'chatgpt-4o-latest',
+      label: 'ChatGPT-4o Latest',
+      provider: 'OpenAI',
+      maxTokenAllowed: 128000,
+      maxCompletionTokens: 4096,
+    },
+    {
+      name: 'gpt-5',
+      label: 'GPT-5 (Next Gen)',
+      provider: 'OpenAI',
+      maxTokenAllowed: 300000,
+      maxCompletionTokens: 150000,
+    },
+    {
+      name: 'gpt-5-mini',
+      label: 'GPT-5 Mini',
+      provider: 'OpenAI',
+      maxTokenAllowed: 200000,
+      maxCompletionTokens: 100000,
+    },
+    {
+      name: 'gpt-5-nano',
+      label: 'GPT-5 Nano',
+      provider: 'OpenAI',
+      maxTokenAllowed: 128000,
+      maxCompletionTokens: 64000,
+    },
   ];
 
   async getDynamicModels(
